@@ -54,6 +54,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 0 1rem;
 }
 
 header h1 {
@@ -66,6 +68,7 @@ header h1 {
   font-size: 1.5rem;
   color: #00ffcc;
   min-height: 2rem;
+  margin-bottom: 1rem;
 }
 
 .btn-contact {
@@ -75,6 +78,11 @@ header h1 {
   color: #121212;
   font-weight: 600;
   text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-contact:hover {
+  background: #0099cc;
 }
 
 .container {
@@ -86,7 +94,7 @@ header h1 {
 .section {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.7s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
   margin-bottom: 3rem;
 }
 
@@ -97,6 +105,7 @@ header h1 {
 
 .section h2 {
   color: #00bfff;
+  margin-bottom: 1rem;
 }
 
 #contact-form {
@@ -105,10 +114,20 @@ header h1 {
   gap: 10px;
 }
 
-#contact-form input, #contact-form textarea {
+#contact-form input,
+#contact-form textarea {
   padding: 10px;
   border: none;
   border-radius: 4px;
+  font-size: 1rem;
+  background: #1a1a1a;
+  color: #eee;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #00bfff;
 }
 
 .btn-submit {
@@ -118,6 +137,12 @@ header h1 {
   padding: 10px;
   border-radius: 5px;
   font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #0099cc;
 }
 
 footer {
@@ -127,3 +152,19 @@ footer {
   color: #555;
 }
 
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-contact {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
