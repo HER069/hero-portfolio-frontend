@@ -6,9 +6,9 @@
   <title>GURUNG APAR - Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+
   <nav>
     <div class="nav-container">
       <a href="#" class="logo">GURUNG APAR</a>
@@ -28,12 +28,12 @@
   </header>
 
   <main class="container">
-    <section id="about" class="section reveal">
+    <section id="about" class="section">
       <h2><i class="fas fa-user"></i> About Me</h2>
       <p>Hello! I'm GURUNG APAR, a 1st year Business student from Nepal. I speak English, Japanese, Nepali, and Hindi. Passionate about teamwork, presentations, and learning new business skills.</p>
     </section>
 
-    <section id="skills" class="section reveal">
+    <section id="skills" class="section">
       <h2><i class="fas fa-tools"></i> Skills</h2>
       <ul>
         <li>Presentation & Public Speaking</li>
@@ -44,27 +44,26 @@
       </ul>
     </section>
 
-    <section id="projects" class="section reveal">
+    <section id="projects" class="section">
       <h2><i class="fas fa-folder-open"></i> Projects</h2>
       <p>Some of my projects and activities during my university journey.</p>
     </section>
 
-    <section id="contact" class="section reveal">
+    <section id="contact" class="section">
       <h2><i class="fas fa-envelope"></i> Contact</h2>
-     <form id="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
-
-      <p id="form-status"></p>
+      <form id="contact-form" action="https://formspree.io/f/xvgrqdgq" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </main>
 
   <footer>
     &copy; 2025 GURUNG APAR | Made with ❤️ by HERO
   </footer>
-   <script src="scripts.js"></script>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
