@@ -28,3 +28,30 @@ function reveal() {
 }
 window.addEventListener('scroll', reveal);
 window.addEventListener('load', reveal);
+
+// Contact form submission via fetch API
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
+
+  try {
+    const response = await fetch('https://hero-contact-backend.vercel.app/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    alert(result.message || 'Message sent!');
+    form.reset();
+
+  } catch (error) {
+    alert('Failed to send message. Please try again later.');
+  }
+});
